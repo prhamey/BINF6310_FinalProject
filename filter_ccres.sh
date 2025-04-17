@@ -36,3 +36,7 @@ echo "Number of matched tissue-specific cCREs: $num_tissue_matches"
 
 #  Cleanup intermediate files
 rm ccre_ids.txt ctcfprox_elements.bed filtered_names.txt filtered_tissue_names.txt
+
+#  Break file in to 900 line segments
+split -l 900 tissue_cCREs.bed chunk_
+
